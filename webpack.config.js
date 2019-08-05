@@ -44,6 +44,7 @@ module.exports = (env, argv) => ({
             '@sabaki/gtp': emptyPath,
             '../modules/enginesyncer': emptyPath,
             '../modules/gtplogger': path.join(__dirname, 'src/modules/shims/gtplogger'),
+            '../../modules/gtplogger' : path.join(__dirname, 'src/modules/shims/gtplogger'),
             '../modules/treetransformer': emptyPath,
             './i18n': path.join(__dirname, 'src/modules/shims/i18n'),
             '../i18n': path.join(__dirname, 'src/modules/shims/i18n'),
@@ -56,7 +57,6 @@ module.exports = (env, argv) => ({
             './TextSpinner': noopPath,
             '../TextSpinner': noopPath,
             './drawers/AdvancedPropertiesDrawer': noopPath,
-            './drawers/PreferencesDrawer': noopPath,
             './drawers/CleanMarkupDrawer': noopPath,
             './bars/AutoplayBar': noopPath,
             './bars/GuessBar': noopPath

@@ -347,6 +347,15 @@ class InfoDrawer extends Component {
             h('form', {},
                 h('section', {},
                     h('span', {},
+                        h('img', {
+                            tabIndex: 0,
+                            src: './node_modules/octicons/build/svg/chevron-down.svg',
+                            width: 16,
+                            height: 16,
+                            class: classNames({menu: true, active: engines[0] != null}),
+                            onClick: this.handleEngineMenuClick[0]
+                        }), ' ',
+
                         h('input', {
                             type: 'text',
                             name: 'rank_1',
@@ -388,7 +397,16 @@ class InfoDrawer extends Component {
                             placeholder: t('Rank'),
                             value: whiteRank,
                             onInput: this.handleInputChange.whiteRank
-                        }), ' '
+                        }), ' ',
+
+                        h('img', {
+                            tabIndex: 0,
+                            src: './node_modules/octicons/build/svg/chevron-down.svg',
+                            width: 16,
+                            height: 16,
+                            class: classNames({menu: true, active: engines[1] != null}),
+                            onClick: this.handleEngineMenuClick[1]
+                        })
                     )
                 ),
 
